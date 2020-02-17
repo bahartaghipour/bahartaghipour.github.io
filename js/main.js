@@ -35,7 +35,7 @@ function displayNotification() {
   if (Notification.permission == 'granted') {
     navigator.serviceWorker.getRegistration().then(function(reg) {
       var options = {
-        body: 'Here is a notification body!',
+        body: 'Welcome to PWA world ;)',
         icon: '../images/hello-icon-128.png',
         vibrate: [100, 50, 100]
       };
