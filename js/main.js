@@ -12,7 +12,7 @@ window.onload = () => {
     albumMaker(items);
 
     document.getElementById("search_input").addEventListener('keyup', function(e){
-      var value = e.target.value;
+      var value = e.target.value.toLowerCase();
       var album_items = items.filter(item => item.title.includes(value));
       albumMaker(album_items);
     })
@@ -20,7 +20,7 @@ window.onload = () => {
 }
 function albumMaker(items) {
   var album = '';
-  for(var i=0; i <= items.length - 1; i++){
+  for(let i in items){
     album += '<div class="card"><img src="' + items[i].thumbnailUrl + '" /><div class="card-title">'+ items[i].title +'</div></div>';
   };
   document.getElementById("album").innerHTML = album;
@@ -39,7 +39,7 @@ function displayNotification() {
         icon: '../images/hello-icon-128.png',
         vibrate: [100, 50, 100]
       };
-      reg.showNotification('Hello world!', options);
+      reg.showNotification('Hello guys!', options);
     });
   }
 }
