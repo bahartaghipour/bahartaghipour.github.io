@@ -36,6 +36,7 @@ self.addEventListener('activate', e => {
 
 /* Serve cached content when offline */
 self.addEventListener('fetch', function(e) {
+  console.log(e);
   e.respondWith(
     // caches.open(currentCache['dynamic']).then(cache => {
     //   return cache.match(e.request).then(response => {
