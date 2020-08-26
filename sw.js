@@ -1,4 +1,4 @@
-var cacheVersion = '2';
+var cacheVersion = '3';
 var filesToCache = [
   '/',
   '/index.html',
