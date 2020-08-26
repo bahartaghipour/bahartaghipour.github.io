@@ -1,4 +1,4 @@
-var cacheVersion = '3';
+var cacheVersion = '1';
 var filesToCache = [
   '/',
   '/index.html',
@@ -37,6 +37,7 @@ self.addEventListener('activate', e => {
 /* Serve cached content when offline */
 self.addEventListener('fetch', function(e) {
   console.log(e);
+  debugger;
   e.respondWith(
     // caches.open(currentCache['dynamic']).then(cache => {
     //   return cache.match(e.request).then(response => {
